@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/stylesheets/todo.css">
+    <title>My ToDo</title>
+</head>
+<body>
+    <div id="todo-table">
+        <form>
+            <input type="text" id="newItem" name="newItem" placeholder="New todo!">
+            <button type="submit">Add</button>
+        </form>
+
+        <ul>
+            <% for (var i = 0; i < todos.length; i++) { %>
+                <li><%= todos[i].item %></li>
+            <% } %>
+        </ul>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="/assets/javascripts/todo.js"></script>
+</body>
+</html>
